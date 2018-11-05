@@ -1,0 +1,1464 @@
+/*Css Reset*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td, 
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	font-family: 'karla';
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+@font-face {
+    font-family: "karla";
+    src: url('../fonts/karla/Karla-Regular.ttf');
+}
+@font-face {
+    font-family: "open-sans";
+    src: url('../fonts/open-sans/OpenSans-Regular.ttf');
+}
+@font-face {
+    font-family: "karla-bold";
+    src: url('../fonts/karla/Karla-Bold.ttf');
+}
+@font-face {
+    font-family: "karla-italic";
+    src: url('../fonts/karla/Karla-Italic.ttf');
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.header {
+	height: 100vh;
+	position: relative;
+	background-size: cover	;
+	background-repeat: no-repeat;	
+	background-attachment: fixed;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	text-align: 	center;	
+	-webkit-box-pack: 	center;	
+	    -ms-flex-pack: 	center;	
+	        justify-content: 	center;	
+}
+.pembungkus {
+  color: white;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 9;
+  background-color: rgba(2,2,2,0.6);
+}
+/*SLIDE SHOW*/
+.pic-wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+figure {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  animation: slideShow 24s linear infinite 0s;
+}
+
+figurecaption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: #fff;
+}
+
+.pic-1 {
+  opacity: 1;
+  background: url('../img/img-1.png'); 
+  background-size: cover;
+}
+
+.pic-2 {
+  animation-delay: 6s;
+  background: url('../img/img-2.png')bottom no-repeat; 
+  background-size: cover;
+}
+
+.pic-3 {
+  animation-delay: 12s;
+  background: url('../img/img-3.png')bottom no-repeat; 
+  background-size: cover;
+}
+
+.pic-4 {
+  animation-delay: 18s;
+  background: url('../img/img-4.png'); 
+  background-size: cover;
+}
+/* keyframes*/
+
+@keyframes 
+slideShow {  
+	0% {
+	 opacity: 0;
+	 transform:scale(1.5);
+	}
+	 5% {
+	 opacity: 1
+	}
+	 25% {
+	 opacity: 1;
+	}
+	 30% {
+	 opacity: 0;
+	 transform:scale(1);
+	}
+	 100% {
+	 opacity: 0;
+	 transform:scale(1.5);
+	}
+}
+
+/*LOGO*/
+.logo {
+	position: absolute;
+	font-family: 'karla-bold';
+	color: #fff;
+	margin-top: 20px;
+	margin-left: 40px;
+}
+.logo a {
+	position: absolute;
+	color: #fff;
+	font-size: 20px;
+	text-decoration: none;
+	width: 35px;
+	height: 20px;
+	border: 2px solid transparent;
+	text-align: center;
+	line-height: 20px;
+	-webkit-transition: .8s;
+	-o-transition: .8s;
+	transition: .8s;
+}
+.logo a:before,
+.logo a:after {
+	content: '';
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: -2px;
+	left: -2px;
+	border: 2px solid transparent;
+	-webkit-transform: rotate(0deg);
+	    -ms-transform: rotate(0deg);
+	        transform: rotate(0deg);
+	-webkit-transition: .8s;
+	-o-transition: .8s;
+	transition: .8s;
+}
+.logo a:/*hover*/ {
+	border: 2px solid #fff;
+	border-bottom: 2px solid transparent;
+	border-top: 2px solid transparent;	
+}
+
+.logo a:/*hover*/:before {
+	-webkit-transform: rotate(120deg);
+	    -ms-transform: rotate(120deg);
+	        transform: rotate(120deg);
+	border: 2px solid #fff;
+	border-bottom: 2px solid transparent;
+	border-top: 2px solid transparent;	
+}
+
+.logo a:/*hover*/:after {
+	-webkit-transform: rotate(-120deg);
+	    -ms-transform: rotate(-120deg);
+	        transform: rotate(-120deg);
+	border: 2px solid #fff;
+	border-bottom: 2px solid transparent;
+	border-top: 2px solid transparent;	
+}
+
+/*NAVBAR*/
+.header nav {
+	z-index: 9999;
+	position: fixed;
+	font-family: 'karla-bold';	
+	font-size: 15px;
+	width: 100%;
+	height: 60px;
+	transition: 0.7s;
+}
+.header nav ul.topnav {
+    background-color: #000;
+}
+.header nav ul li {
+	margin-right: 20px;
+	list-style: none;
+	float: right;
+	line-height: 55px;
+}
+.header nav ul li a {
+	list-style: none;
+	color: white;
+	text-decoration: none;
+	display: inline-block;
+    transition: 0.3s;	
+}
+.header nav ul li:hover a {
+	transform: scale(1.15);
+}
+/*Sembunyikan Icon*/
+ul.topnav li.icon {
+	font-size: 20px;
+	display: none;
+}
+ul.topnav li.icon i {
+	margin-top: 20px;
+}
+
+/* Saat lebar layar kurang dari 680 pixel, sembunyikan semua menu item kecuali item yang pertama yaitu("Home"). Tampilkan juga list item yang berisi link untuk membuka menu yaitu (li.icon) */
+@media screen and (max-width:768px) {
+  ul.topnav li {
+  	display: none;
+  }
+  ul.topnav li.icon {
+    float: right;
+    display: inline-block;
+  }
+}
+
+
+/* Class dengan nama "responsive" akan ditambahkan oleh JavaScript saat user mengklik icon. Munculnya Class ini akan mendisplay isi list menu 
+*/
+
+@media screen and (max-width:768px) {
+  ul.topnav.responsive {position: relative;}
+
+	.header nav ul li {
+		list-style: none;
+		float: left;
+		line-height: 20px;
+	}
+  
+  ul.topnav.responsive li.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  ul.topnav.responsive li {
+    float: none;
+    display: inline;
+  }
+  ul.topnav.responsive li a {
+    display: block;
+    text-align: center;
+  }
+  ul.topnav.responsive li:not(:last-child) a:hover{
+	/*color: rgba(255,255,255,0.5);*/
+	/*padding-left: 20px;*/
+	transform: scale(1.2);
+  }
+}
+
+/*Slogan*/
+.header .slogan {
+	z-index: 999;
+	position: absolute;
+	top: 48%;
+	left: 50%;
+	-webkit-transform: 	translate(-50%, -50%);
+	    -ms-transform: 	translate(-50%, -50%);
+	        transform: 	translate(-50%, -50%);
+	width: 30%;
+}
+.slogan hr {
+	opacity: 0;
+	-webkit-transform: translate(0,50px);
+	    -ms-transform: translate(0,50px);
+	        transform: translate(0,50px);
+	-webkit-transition: .7s;
+	-o-transition: .7s;
+	transition: 1s;
+	display: inline-block;
+	width: 50px;
+}
+.smartcity {
+	opacity: 0;
+	-webkit-transform: translate(0,-50px);
+	    -ms-transform: translate(0,-50px);
+	        transform: translate(0,-50px);
+	-webkit-transition: 1s;
+	-o-transition: 1s;
+	transition: 1s;
+	letter-spacing: 5px;
+	color: white;
+	display: inline-block;
+}
+.namaaplikasi {
+	display: block;	
+	opacity: 0;
+	margin: 15px auto;	
+	font-family: 'karla-bold';
+	letter-spacing: 10px;
+	font-size: 50px;	
+	color: white;
+	-webkit-transform: translate(100px,0);
+	    -ms-transform: translate(100px,0);
+	        transform: translate(100px,0);
+	-webkit-transition: 1.5s;
+	-o-transition: 1.5s;
+	transition: 1.5s;
+	transition-delay: .5s;
+}
+.keteranganaplikasi {
+	opacity: 0;
+	font-family: 'karla-italic';
+	text-align: center;
+	line-height:25px;
+	font-size: 20px;
+	font-weight: 100;
+	color: white;
+	-webkit-transform: translate(-100px,0);
+	    -ms-transform: translate(-100px,0);
+	        transform: translate(-100px,0);
+	-webkit-transition: 1.5s;
+	-o-transition: 1.5s;
+	transition: 1.5s;
+	transition-delay: 1s;
+}
+.header .slogan button {
+	opacity: 0;
+	-webkit-transform: translate(0,50px);
+	    -ms-transform: translate(0,50px);
+	        transform: translate(0,50px);
+	font-family: 'karla-bold';
+	margin-right: 10px;
+	margin-top: 30px;
+	font-size: 15px;
+	padding: 10px 10px;
+	border: 1px solid white;
+	color: white;
+	background: transparent;
+	-webkit-transition: .7s;
+	-o-transition: .7s;
+	transition: .7s;
+}
+.header .slogan button:hover {
+	cursor: pointer;
+	background-color: rgba(0,0,0,0.5);
+	border: 2px solid #fff;
+}
+.klikbawah {
+	z-index: 999;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	color: white;
+	font-size: 60px;
+	display: block;
+	font-weight: bold;
+	animation: sorodot 1s infinite;
+	animation-delay: 2.5s;
+}
+@keyframes sorodot {
+    from {opacity: 1;
+	bottom: 10%;
+    }
+    to {opacity: .2;
+    	bottom: 5%;
+    }
+}
+
+/*##########################################################*/
+						/*SECTION MASALAH*/
+/*##########################################################*/
+.masalah {
+	height: 100vh;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+}
+.masalah h1 {
+	text-align: center;
+	margin: 35px 0 30px 0;
+	font-size: 20px;
+	letter-spacing: 2px;
+}
+.masalah hr {
+	width: 100px;
+	margin-bottom: 45px;
+}
+.masalah1 {
+	margin-bottom: 40px;
+	-webkit-columns: 2;
+	        columns: 2;
+	-webkit-column-gap: 40px;
+	        column-gap: 40px;
+}
+.gambarmasalah {
+	width: 415px;
+	height: 235px;
+	background-size: cover;
+}
+.masalah .satu {
+	background: url(../img/masalah1.png) center no-repeat;
+}
+.masalah .dua {
+	background: url(../img/masalah2.png) center no-repeat;
+}
+.keteranganmasalah {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	line-height: 18px;
+	padding: 30px;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+	background: white;
+	width: 415px;
+	height: 235px;
+	-webkit-box-shadow: 1px 1px 15px rgba(0,0,0,.4);
+	        box-shadow: 1px 1px 15px rgba(0,0,0,.4);
+	border: 1px solid gray;
+}
+
+.km-1 {
+	opacity: 0;
+	transform: translate(-80px,-80px);
+	transition: 1.5s;
+}
+.gambarmasalah.satu {
+	opacity: 0;
+	transform: translate(80px,-80px);
+	transition: 1.5s;
+}
+.km-2 {
+	opacity: 0;
+	transform: translate(80px);
+	transition: 1.5s;
+}
+.gambarmasalah.dua {
+	opacity: 0;
+	transform: translate(-80px);
+	transition: 1.5s;
+}
+.masalahparallax {
+	opacity: 1;
+	transform: translate(0,0);
+}
+.gambarmasalah.satu.masalahparallax {
+	opacity: 1;
+	transform: translate(0,0);
+}
+.gambarmasalah.dua.masalahparallax {
+	opacity: 1;
+	transform: translate(0,0);
+}
+/*##########################################################*/
+						/*SECTION 3 (FITUR)*/
+/*##########################################################*/
+.fitur {
+	overflow: hidden;
+	position: relative;
+	height: 100vh;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	background: url(../img/background/fitur-back.png) center no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+}
+.fitur h1 {
+	text-align: center;
+	margin: 35px 0 30px 0;
+	font-size: 20px;
+	color: white;
+	letter-spacing: 4px;
+}
+.fitur hr {
+	width: 100px;
+}
+.isifitur {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%,-50%);
+	    -ms-transform: translate(-50%,-50%);
+	        transform: translate(-50%,-50%);
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: row;
+	        flex-direction: row;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+}
+.fitur1 {
+}
+.fitur1.satu, .fitur1.dua{	
+	margin-right: 180px;
+}
+.bulat {
+	position: relative;
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	border: 2px solid white;
+}
+.logo-ftr {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	-webkit-transform: translate(-50%,-50%);
+	    -ms-transform: translate(-50%,-50%);
+	        transform: translate(-50%,-50%);
+	color: white;
+	font-size: 80px;
+}
+.fitur h2 {
+	text-align: center;
+	font-size: 20px;
+	color: white;
+	margin: 30px 0;
+	letter-spacing: 4px;
+}
+.fitur p {
+	width: 100%;
+	color: white;
+	text-align: center;
+	line-height: 20px;
+}
+
+/*##########################################################
+					/*SECTION LAPORKAN*/
+/*##########################################################*/
+
+#laporkan {
+	position: relative;	
+	height: 500px;
+	box-sizing: border-box;
+	background: #f2f2f2;
+}
+
+#laporkan .wadah-input {
+	box-sizing: border-box;
+	width: 100%;
+	position: absolute;
+	display: inline-block;
+	height: 500px;	
+	display: flex;
+	justify-content: center;	
+	flex-direction: column;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+
+}
+#laporkan .input-grup {
+	box-sizing: border-box;
+	/*text-align: left;*/
+	margin: 30px auto;
+}
+#laporkan h1 {
+	margin:0 0 30px 0;
+	font-size: 20px;
+	letter-spacing: 2px;
+	color: black;	
+	text-align: center;
+}
+#laporkan hr {
+	width: 100px;
+	/*margin-bottom: 150px;*/
+}
+.lapor-img {
+	background: url(../img/lapor.png) center no-repeat;
+	background-size: cover;
+	width: 40%;
+	height: 500px;	
+	display: inline-block;
+	position: absolute;
+	right: 0;
+}
+.inputfile {
+	width: 450px;
+}
+#laporkan input {
+	box-sizing: border-box;
+	padding: 5px;
+	font-family: 'karla';
+	border: 1px solid #333;
+	border-radius: 5px;
+}
+.baris1, .baris2 {
+	columns: 2;
+	column-gap: 15px;
+	display: flex;
+	justify-content: center;
+}
+.baris3 {
+	columns: 1;
+	column-gap: 15px;
+	display: flex;
+	display: flex;
+	justify-content: center;	
+}
+
+.inputnama, .inputciri,.inputkontak,.inputketerangan {
+	margin: 10px 10px 10px 0;
+}
+.inputnama,.inputciri,.inputkontak,.inputketerangan {
+	width: 300px;
+	height: 35px;
+}
+.inputalamat {
+	width: 595px;
+	display: block;
+	padding: 5px;
+	margin-top: 10px;
+	margin-left: -10px;
+	margin-bottom: 10px;
+	border-radius: 5px;	
+	border: 1px solid #333;
+}
+
+#laporkan .btn-lapor {
+	width: 145px;
+	height: 35px;
+	margin:5px 15px 5px 5px;
+	cursor: pointer;
+	border: none;
+	background-color: #7491AE;
+	color: #fff;
+	border-bottom: 2px solid #557391;
+	border-right: 2px solid #557391;
+	border-radius: 5px;
+}
+#laporkan .btn-lapor:hover {
+	background-color: #557391;
+}
+
+/*##########################################################
+				/*SECTION MASONRY GALLERY (4)*/
+/*##########################################################*/
+#gallery {
+	position: relative;	
+	height: 100vh;
+	padding: 40px 0px;
+	box-sizing: border-box;
+}
+#gallery h1 {
+	margin:0 0 30px 0;
+	font-size: 20px;
+	letter-spacing: 2px;
+	color: black;	
+	text-align: center;
+}
+#gallery hr {
+	width: 100px;
+	margin-bottom: 150px;
+}
+.baris-1 {
+	padding-left: 20px;
+	padding-right: 20px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	height: 400px;
+	width: 100%;
+	background-color: white;
+	overflow: hidden;
+}
+.img-thm {
+	display: inline-block;
+	width: 326px;
+	height: 400px;
+	-webkit-transition: .5s;
+	-o-transition: .5s;
+	transition: .5s;
+	opacity: 0;
+	-webkit-transform: translate(0,50px);
+	    -ms-transform: translate(0,50px);
+	        transform: translate(0,50px);
+	 box-sizing: border-box;
+	 text-decoration: none;
+	 color: black;
+	
+}
+.img-thm.muncul {
+	opacity: 1;
+	-webkit-transform: translate(0,0);
+	    -ms-transform: translate(0,0);
+	        transform: translate(0,0);
+	        overflow: hidden;
+}
+.aww {
+	width: 326px;
+	height: 220px;
+	color: white;
+	font-size: 40px;
+	transition: 1s;
+	overflow: hidden;
+}
+.aww:hover img{
+	-webkit-transform: scale(1.1);
+	    -ms-transform: scale(1.1);
+	        transform: scale(1.1);
+	-webkit-transition: 0.5s;
+	-o-transition: 0.5s;
+	transition: 0.5s;
+	overflow: hidden;
+}
+.aww img{
+	width: 100%;
+	height: 100%;
+	transition: 1s;	
+} 
+.nama-org {
+	font-family: 'karla-bold';
+	text-transform: uppercase;
+}
+.nama-org, .ktr-org {
+	margin: 10px;
+}
+.pindah-kiri{
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background: rgba(0,0,0,.7);
+	position: absolute;
+	top: 50%;
+	left: .5%;
+	z-index: 10;
+	cursor: pointer;
+	display: none;
+	transition: 1s;
+	transition-delay: 1.5s;
+	right: .5%;
+	text-align: center;
+}
+.pindah-kanan{
+	transition: 2s;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background: rgba(0,0,0,.7);
+	position: absolute;
+	top: 50%;
+	z-index: 10;
+	cursor: pointer;
+	transform: translateX(-200px);
+	transition: 1s;
+	transition-delay: 1.5s;
+	opacity: 0;
+	right: .5%;
+	text-align: center;
+}
+.pindah-kanan i,.pindah-kiri i{
+	line-height: 40px;
+	font-size: 30px;
+	color: white;
+}
+.pindah-kanan.muncul {
+	transform: translateX(0);
+	opacity: 1;
+}
+.img-1 {
+	transition: 1s;
+}
+/*Overlay*/
+.overlay {
+	width: 0;
+	height: 0;
+	overflow: hidden;
+	position: fixed;
+	z-index: 999;
+	right: 0px;
+	bottom: 0px;
+	top: -200px;
+	left: 0;
+	background-color: rgba(0,0,0,0);
+	text-align: center;
+	padding: 100px;
+}
+
+.overlay:target {
+	margin: auto;
+	width: auto;
+	height: auto;
+	top: 0px;
+	left: 0px;
+	background-color: rgba(0,0,0,0.8);
+
+}
+.overlay img {
+	border: 2px solid #000;
+	border-radius: 5px;
+	max-height: 100%;
+	-webkit-box-shadow: 0 0 10px rgba(0,0,0,.7);
+	        box-shadow: 0 0 10px rgba(0,0,0,.7);
+	-webkit-transition: 0.5s;
+	-o-transition: 0.5s;
+	transition: 0.5s;
+}
+
+.overlay .close {
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	bottom: 40px;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	    -ms-transform: translateX(-50%);
+	        transform: translateX(-50%);
+	color: white;
+	text-decoration: none;
+	background-color: #000;
+	border:1px solid #fff;
+	line-height: 30px;
+	opacity: 0;	
+}
+
+.next, .prev {
+	color: white;
+	font-size: 40px;
+	position: absolute;
+	margin-left: 25px;
+	opacity: 0;
+}
+.prev {
+	margin: -85px;
+	top: 56.5%;
+}
+.next {
+	margin: -85px -85px -85px 50px;
+	top: 56.5%;
+}
+
+.overlay:target img {
+	-webkit-animation: zoomdanfade 0.8s;
+	        animation: zoomdanfade 0.8s;
+} 
+
+.overlay:target .close {
+	border-radius: 50%;
+	-webkit-animation: slideDownFade .5s .5s forwards;
+	        animation: slideDownFade .5s .5s forwards;
+}
+
+.overlay:target .next,
+.overlay:target .prev {
+	-webkit-animation: fade .5s .5s forwards;
+	        animation: fade .5s .5s forwards;
+}
+/*animasi*/
+@-webkit-keyframes fade {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes fade {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes zoomdanfade {
+	0% {
+		margin-right: 200px;
+		opacity:0;
+	}
+
+	100% {
+		margin-right: 0;
+		opacity:1;
+	}
+}
+
+@keyframes zoomdanfade {
+	0% {
+		margin-right: 200px;
+		opacity:0;
+	}
+
+	100% {
+		margin-right: 0;
+		opacity:1;
+	}
+}
+
+@-webkit-keyframes slideDownFade{
+	0% {
+		opacity: 0;
+		margin-top: -20px;
+	}
+
+	100% {
+		opacity: 1;
+		margin-top: 0;
+	}
+}
+
+@keyframes slideDownFade{
+	0% {
+		opacity: 0;
+		margin-top: -20px;
+	}
+
+	100% {
+		opacity: 1;
+		margin-top: 0;
+	}
+}
+
+
+/*##########################################################
+				/*SECTION TESTIMONI (6)*/
+/*##########################################################*/
+
+.testimoni {
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	background: url(../img/background/back-testimoni.png) top no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	text-align: center;
+}
+.testimoni hr {
+	width: 100px;
+}
+.testimoni h1 {
+	text-align: center;
+	margin: 40px 0 20px 0;
+	letter-spacing: 5px;
+	font-size: 20px;
+	color: white;
+}
+.wadah {
+	border-top: 1px solid white;
+	border-bottom: 1px solid white;
+	position: absolute;
+	left: 50%;
+	top: 55%;
+	-webkit-transform: translate(-50%,-50%);
+	    -ms-transform: translate(-50%,-50%);
+	        transform: translate(-50%,-50%);
+	width: 60%;
+	height: 70%;
+	background: rgba(0,0,0,.4);
+	border-radius: 10px;
+}
+.fprofil {
+	margin: 20px auto;
+	width: 160px;
+	height: 160px;
+	border-radius: 50%;
+	-webkit-box-shadow: 0px  5px 18px 0px  black;
+	        box-shadow: 0px  5px 18px 0px  black;
+}
+.profil-1 {
+	background: url(../img/dimas.png) center no-repeat;
+	background-size: cover;
+}
+.profil-2 {
+	background: url(../img/sulthon.png) center no-repeat;
+	background-size: cover;
+}
+.profil-3 {
+	background: url(../img/ilham.png) center no-repeat;
+	background-size: cover;
+}
+.profil-4 {
+	background: url(../img/dian.png) center no-repeat;
+	background-size: cover;
+}
+.profil-5 {
+	background: url(../img/egi.png) center no-repeat;
+	background-size: cover;
+}
+.nama, .alamat {
+	text-align: center;
+	margin: 0 auto;
+	display: block;
+	font-size: 28px;
+	font-family: 'karla';
+	color: white;
+}
+.alamat {
+	font-style: normal;
+	width: 210px;
+	height: 20px;
+	line-height: 18px;
+	margin-top: 30px;
+	font-size: 18px;
+}
+.wadah hr {
+	margin: 20px auto;
+	width: 120px;
+}
+.kuot {
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	background: url(../img/quot.png) center no-repeat;
+	background-size: cover;
+}
+.komentar {
+	padding: 0 50px;
+	margin: 0 auto;
+	text-align: center;
+	display: block;
+	width: 90%;
+	height: 30%;
+	line-height: 25px;
+	margin-top: 20px;
+	font-size: 16px;
+	font-family: 'karla' ;
+	color: white;
+}
+.geser {
+	clear: both;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: row;
+	        flex-direction: row;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	width: 115px;
+	height: 15px;
+	margin: -10px auto;
+}
+.pilih {
+	display: inline-block;
+	float: left;
+	width: 10px;
+	height: 10px;
+	background: white;
+	border-radius: 50%;
+	margin-left: 5px;
+	cursor: pointer;
+	z-index: 10;
+}
+.aktif {
+	background: #4F73FD;
+}
+.share {
+	float: right;
+	height: 30px;
+	margin: 20px 20px 0 0;
+}
+.kiri {
+	cursor: pointer;
+	position: absolute;
+	width: 25px;
+	height: 25px;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	    -ms-transform: translateY(-50%);
+	        transform: translateY(-50%);
+	left: 15%;
+	background: url(../img/kiri.png) center no-repeat;
+	background-size: cover;
+	opacity: 0;
+	transition: 1.5s;
+}
+.kanan {
+	cursor: pointer;
+	position: absolute;
+	width: 25px;
+	height: 25px;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	    -ms-transform: translateY(-50%);
+	        transform: translateY(-50%);
+	right: 15%;
+	background: url(../img/kanan.png) center no-repeat;
+	background-size: cover;
+	opacity: 0;
+	transition: 1.5s;
+}
+.kananparallax {
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	    -ms-transform: translateY(-50%);
+	        transform: translateY(-50%);
+	right: 2%;
+	opacity: 1;
+}
+.kiriparallax {
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	    -ms-transform: translateY(-50%);
+	        transform: translateY(-50%);
+	left: 2%;
+	opacity: 1;
+}
+.testimoni-1 {
+	display: none;
+}
+.testimoni-1.aktifkan {
+	display: inline-block;
+	transition: 1s;
+}
+.testimoni-2 {
+	display: none;
+}
+.testimoni-2.aktifkan {
+	display: inline-block;
+}
+.testimoni-3 {
+	display: none;
+}
+.testimoni-3.aktifkan {
+	display: inline-block;
+}
+.testimoni-4 {
+	display: none;
+}
+.testimoni-4.aktifkan {
+	display: inline-block;
+}
+.testimoni-5 {
+	display: none;
+}
+.testimoni-5.aktifkan {
+	display: inline-block;
+}
+.testimoni-2 {
+	display: none;
+}
+.testimoni-2.aktifkan {
+	display: inline-block;
+}
+
+/*##########################################################
+				/*SECTION FOOTER (8)*/
+/*##########################################################*/
+.hitung {
+	padding: 50px;
+	-webkit-columns: 5;
+	        columns: 5;
+	-webkit-column-gap:30px;
+	        column-gap:30px;
+	background: white;
+	color: black;
+}
+.angka {
+	font-size: 30px;
+	margin-bottom: 10px;
+}
+.futer {
+	color: white;
+	-webkit-columns: 4;
+	        columns: 4;
+	-webkit-column-gap: 10px;
+	        column-gap: 10px;
+	padding: 35px;
+	background: url(../img/background/header.png) center no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+
+}
+.judulfuter.utama {
+	text-align: left;
+	font-size: 30px;
+	color: white;
+	margin-bottom: 10px;
+	letter-spacing: 2px;
+	font-weight: 100;
+}
+.judulfuter.utama strong{
+	color: white;	
+}
+.judulfuter {
+	font-size: 17px;
+	color: white;
+	font-weight: 100;
+	margin-bottom: 10px;
+
+}
+.futer i {
+	font-size: 50px;
+	margin-bottom: 10px;
+	color: white;	
+}
+
+.isifuter {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	height: 250px;
+	transform: translateX(100px);
+	transition: 1s;
+	opacity: 0;
+	transition-delay: 1.5s;
+}
+.isifuterparallax {
+	transform: translateX(0);
+	opacity: 1;
+}
+.isifuter .keterangan {
+	color: white;
+	text-align: left;
+	line-height: 20px;
+}
+.isifuter.empat, 
+.isifuter.dua, 
+.isifuter.tiga {
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+}
+.isifuter.satu, 
+.isifuter.dua, 
+.isifuter.tiga {
+	border-right : 1px solid white;
+}
+.kopiraig {
+	text-align: center;
+	font-size: 14px;
+	line-height: 25px;
+	color: white;
+	height: 25px;
+	background: black; 
+
+}
+/*##########################################################*/
+						/*PARRALAX*/
+/*##########################################################*/
+
+
+.header .slogan h1.sMuncul {
+	opacity: 1;
+	-webkit-transform: translate(0,0);
+	    -ms-transform: translate(0,0);
+	        transform: translate(0,0);
+}
+.header .slogan p.sMuncul {
+	opacity: 1;
+	-webkit-transform: translate(0,0);
+	    -ms-transform: translate(0,0);
+	        transform: translate(0,0);
+}
+.header .slogan button.bMuncul {
+	opacity: 1;
+	-webkit-transform: translate(0,0);
+	    -ms-transform: translate(0,0);
+	        transform: translate(0,0);
+}
+.smartcity.sMuncul {
+	opacity: 1;
+	-webkit-transform: translate(0,0);
+	    -ms-transform: translate(0,0);
+	        transform: translate(0,0);
+}
+.slogan hr.hrMuncul {
+	opacity: 1;
+	-webkit-transform: translate(0,0);
+	    -ms-transform: translate(0,0);
+	        transform: translate(0,0);
+}
+.header .hero img.hMuncul {
+	opacity: 1;
+	-webkit-transform: translate(0,0);
+	    -ms-transform: translate(0,0);
+	        transform: translate(0,0);
+}
+
+.hitung .hitung1 {
+	-webkit-transition: .5s;
+	-o-transition: .5s;
+	transition: .5s;
+	opacity: 0;
+	-webkit-transform: translate(0,-40px);
+	    -ms-transform: translate(0,-40px);
+	        transform: translate(0,-40px);
+}
+.hitung .hitung1.muncul {
+	opacity: 1;
+	-webkit-transform: translate(0,0);
+	    -ms-transform: translate(0,0);
+	        transform: translate(0,0);
+}
+
+.inputnama,
+.inputkontak {
+	opacity: 0;
+	transform: translate(-50px,0) rotate(15deg);
+	transition: 1s;
+}
+.inputciri,
+.inputketerangan {
+	opacity: 0;
+	transform: translate(50px,0) rotate(-15deg);
+	transition: 1s;
+}
+.inputalamat {
+	opacity: 0;
+	transform: translateY(50px);
+	transition: 1s;
+}
+.inputfile {
+	opacity: 0;
+	transform: translate(-50px,0);
+	transition: 1s;
+}
+.btn-lapor {
+	opacity: 0;
+	transform: translate(50px,0);
+	transition: 1s;
+}
+.inputnama.Muncul, .inputkontak.Muncul {
+	opacity: 1;
+	transform: translate(0,0);
+}
+.inputciri.Muncul, .inputketerangan.Muncul {
+	opacity: 1;
+	transform: translate(0,0);
+}
+.inputalamat.Muncul {
+	opacity: 1;
+	transform: translate(0,0);
+}
+.inputfile.Muncul,
+.btn-lapor.Muncul {
+	opacity: 1;
+	transform: translate(0,0);	
+}
+
+/*Scroll Custom*/
+::-webkit-scrollbar {
+    width: 8px;
+}
+ 
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px black; 
+}
+ 
+::-webkit-scrollbar-thumb {
+    -webkit-box-shadow: inset 0 0 6px black; 
+}
+
+/*Clear Fix*/
+.clearfix:before,
+.clearfix:after {
+    content: " "; 
+    display: table; 
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+/*@media screen and (max-width:759px) {
+	.lapor-img {
+		display: none;
+	}
+	.wadah-input {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	text-align: center;
+	} 
+}
+*/

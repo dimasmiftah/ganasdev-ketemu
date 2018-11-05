@@ -1,0 +1,259 @@
+/*##########################################################*/
+						/*RESPONSIVE*/
+/*##########################################################*/
+
+
+/*Responsive Tablet*/
+@media only screen and (max-width: 768px) {
+	/*HEADER*/
+	.logo {
+		margin-left: 20px;
+		margin-top: 20px;
+	}
+	.header nav ul li {
+		margin-right: 30px;
+	}
+	.header .slogan {
+		width: 50%;
+	}
+
+	/*MASALAH*/
+	.gambarmasalah, .keteranganmasalah {
+		width: 300px;
+		height: 200px;
+		margin-right: 5px;
+	}
+	/*FITUR*/
+	.fitur1.satu, .fitur1.dua{
+		margin-right: 50px;
+	}
+	.bulat {
+		position: relative;
+		width: 150px;
+		height: 150px;
+		border-radius: 50%;
+		border: 2px solid white;
+	}
+	.logo-ftr {
+		font-size: 70px;
+	}
+	.isifitur p {
+		font-size: 14px;
+	}
+
+	/*GALLERY*/
+	
+
+	/*TESTIMONI*/
+	.wadah {
+		width: 90%;
+		height: 60%;
+	}
+	.fprofil {
+		margin: 10px auto;
+		width: 130px;
+		height: 130px;
+	}
+	.nama {
+		font-size: 24px;
+	}
+	.alamat {
+		line-height: 16px;
+		font-size: 16px;
+		margin-top: 10px;
+	}
+	.wadah hr {
+	margin: 10px auto;
+	width: 100px;
+	}
+	.kuot {
+		width: 20px;
+		height: 20px;
+	}
+	.kiri, .kanan {
+		width: 20px;
+		height: 20px;
+	}
+	.komentar {
+		font-size: 15px;
+	}
+	.geser {
+		margin-top: 20px;
+	}
+	/*FUTER*/
+	.hitung {
+	padding: 50px;
+	-webkit-columns: 5;
+	        columns: 5;
+	-webkit-column-gap: 0;
+	        column-gap: 0;
+	background: white;
+	color: black;
+	}
+	.angka {
+		font-size: 25px;
+		margin-bottom: 10px;
+	}
+	.futer {
+		padding: 20px;
+	}
+	.judulfuter.utama {
+		font-size: 20px;
+	}
+	.futer i {
+		font-size: 30px;
+	}
+
+	.isifuter {
+		height: 150px;
+		padding: 10px;
+	}
+	.isifuter .keterangan {
+		font-size: 13px;
+	}
+	.isifuter .keterangan {
+		font-size: 13px;
+	}
+	.kopiraig {
+		font-size: 13px;
+	}
+}
+
+/*Responsive Smartphone*/
+@media only screen and (max-width: 320px) {
+	/*HEADER*/
+	.header .slogan {
+		width: 100%;
+	}
+	.slogan hr {
+	width: 40px;
+	}
+	.smartcity {
+		letter-spacing: 2px;
+	}
+	.namaaplikasi {
+		margin: 20px auto;
+		letter-spacing: 5px;
+		font-size: 40px;
+	}
+	.header .slogan button {
+		font-size: 12px;
+		padding: 10px 10px;
+	}
+	/*MASALAH*/
+	.masalah h1 {
+		margin: 15px 0 10px 0;
+		font-size: 15px;
+		letter-spacing: 2px;
+	}
+	.masalah hr {
+		width: 100px;
+		margin-bottom: 45px;
+	}
+	.masalah1 {
+	margin-bottom: 10px;
+	-webkit-columns: 2;
+	        columns: 2;
+	-webkit-column-gap: 10px;
+	        column-gap: 10px;
+	}
+	.gambarmasalah, .keteranganmasalah {
+		width: 150px;
+		height: 100px;
+		font-size: 12px;
+		line-height: 12px;
+	}
+	/*FITUR*/
+	.fitur1.satu, .fitur1.dua{
+		margin-right: 50px;
+	}
+	.bulat {
+		position: relative;
+		width: 150px;
+		height: 150px;
+		border-radius: 50%;
+		border: 2px solid white;
+	}
+	.logo-ftr {
+		font-size: 70px;
+	}
+	.isifitur p {
+		font-size: 14px;
+	}
+	/*GALLERY*/
+
+
+	/*TESTIMONI*/
+	.wadah {
+		width: 90%;
+		height: 60%;
+	}
+	.fprofil {
+		margin: 10px auto;
+		width: 130px;
+		height: 130px;
+	}
+	.nama {
+		font-size: 24px;
+	}
+	.alamat {
+		line-height: 16px;
+		font-size: 16px;
+		margin-top: 10px;
+	}
+	.wadah hr {
+	margin: 10px auto;
+	width: 100px;
+	}
+	.kuot {
+		width: 20px;
+		height: 20px;
+	}
+	.kiri, .kanan {
+		width: 20px;
+		height: 20px;
+	}
+	.komentar {
+		font-size: 15px;
+	}
+	.geser {
+		margin-top: 20px;
+	}
+	/*FUTER*/
+	.hitung {
+	padding: 50px;
+	-webkit-columns: 5;
+	        columns: 5;
+	-webkit-column-gap: 0;
+	        column-gap: 0;
+	background: white;
+	color: black;
+	}
+	.angka {
+		font-size: 25px;
+		margin-bottom: 10px;
+	}
+	.futer {
+		padding: 20px;
+	}
+	.judulfuter.utama {
+		font-size: 20px;
+	}
+	.futer i {
+		font-size: 30px;
+	}
+
+	.isifuter {
+		height: 150px;
+		padding: 10px;
+	}
+	.isifuter .keterangan {
+		font-size: 13px;
+	}
+	.isifuter .keterangan {
+		font-size: 13px;
+	}
+	.kopiraig {
+		font-size: 13px;
+	}
+}
